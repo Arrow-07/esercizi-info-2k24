@@ -4,9 +4,18 @@
     <title>ESERCIZIO 3</title>
     <script>
         function funzione(A,B){
-            var c;
+            var c, pot;
             A=parseInt(A);
             B=parseInt(B);
+
+            if(A>0){
+                pot = A**B;
+                casela4.value= "potenza di " + A + " alla " + B + " è " + pot;
+            }else{
+                alert("A non è maggiore di 0");
+            }
+
+
             if(A>0 && B>0){
                 if(A<B){
                     c=A;
@@ -17,24 +26,19 @@
                 while((A%c) || (B%c)){
                     c--;
                 }
-                casella3.value= "l' MCD di " + A + " e" + B + " è " + c;
+                casela3.value= "l' MCD di " + A + " e" + B + " è " + c;
             }else{
                 alert("ERRORE");
             }
-
-            //B TO BE FINISCHED
-            if(A>0){
-
-            }
-
         }
     </script>
 </head>
 <body>
-    <input type="text" name="casela1" id="casella1" value="." size="40">
-    <input type="text" name="casela2" id="casella2" value="." size="40">
-    <input type="button" name="bottone1" id="bottone1" value="." onclick="funzione(casella1.value, casella2.value);">
-    <input type="text" name="casela3" id="casella3" value="." size="40">
-    <input type="text" name="casela4" id="casella4" value="." size="40">
+    NUMERO 1: <input type="text" name="casela1" id="casela1" value="." size="40"><br>
+    NUMERO 2: <input type="text" name="casela2" id="casela2" value="." size="40"><br><br>
+
+    <input type="button" name="bottone1" id="bottone1" value="CALCOLA" onclick="funzione(casela1.value,casela2.value);"><br><br>
+    MCD: <input type="text" name="casela3" id="casela3" value="." size="40"><br>
+    POTENZA: <input type="text" name="casela4" id="casela4" value="." size="40">
 </body>
 </html>
