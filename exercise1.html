@@ -1,0 +1,26 @@
+
+<html>
+<head>
+    <title>ES 1</title>
+    <script>
+        function calcolare(lato){
+            var area, perimetro;
+            lato = parseFloat(lato);
+            area = lato * lato * 6;
+            perimetro = 12 * lato;
+            
+            aria.value = area;
+            perimetro1.value = perimetro
+        }
+    </script>
+</head>
+<body>
+    <h1>CALCOLA AREA E PERIMETRO DEL CUBO PARTENDO DAL LATO</h1>
+    lato:<input type="text" value="inserisci lato del quadrato" id="lato"  size="40"/><br><br>
+    <input type="button" value="calcola" name="calcola" id="calcola" onclick="calcolare(lato.value)"/><br><br>
+    area del cubo:
+    <input type="text" value="area" id="aria"  name="aria" size="40"/>
+    perimetro totale del cubo:
+    <input type="text" value="perimetro" id="perimetro1"  name="perimetro1" size="40"/>
+</body>
+</html>

@@ -1,0 +1,28 @@
+
+<html>
+<head>
+    <title>ESERCIZIO 2</title>
+    <script>
+        function numeroprimo(numero){
+            numero = parseInt(numero);
+
+            if(numero <= 0 || numero >= 100){
+                alert("numero non valido")
+            }else{
+                if(numero%2 ==0 || numero%3 ==0 || numero%5 ==0|| numero%7 ==0 || numero%11 ==0){
+                    alert(numero + " non e' un numero primo");
+                }else{
+                    alert(numero + "  è un numero primo.");
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<center>
+    CALCOLATORE NUMERI PRIMI. <br><br>
+    <input type="text" name="numero" id="numero" value="inserisci il numero qui" size="40"><br><br>
+    <input type="button" name="calcola" id="calcola" value="CONTROLLA SE è UN NUMERO PRIMO" onclick="numeroprimo(numero.value);"><br><br>
+</center>
+</body>
+</html>
